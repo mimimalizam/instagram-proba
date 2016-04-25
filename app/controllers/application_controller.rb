@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   # Sad cemo definisemo ruby metodu
   def hello
     render text: "hello, world!"
+    @popular = Instagram.media_popular
   end
 
   # Sada treba da objasnimo Railsu da koristi ovu nasu akciju umesto default strane

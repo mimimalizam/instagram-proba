@@ -4,7 +4,7 @@ class InstaTagsController < ApplicationController
   # GET /insta_tags
   # GET /insta_tags.json
   def index
-    @insta_tags = InstaTag.all
+    @popular = Instagram.media_popular
   end
 
   # GET /insta_tags/1
