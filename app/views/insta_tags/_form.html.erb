@@ -1,0 +1,21 @@
+<%= form_for(@insta_tag) do |f| %>
+  <% if @insta_tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@insta_tag.errors.count, "error") %> prohibited this insta_tag from being saved:</h2>
+
+      <ul>
+      <% @insta_tag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
